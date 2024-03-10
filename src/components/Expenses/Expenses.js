@@ -7,15 +7,15 @@ import { useState } from 'react';
 function Expenses(props) {
   const [filteredYear, setfilteredYear] = useState('2020');
  
-  let filterInfoText = '2019,2021 & 2022';
+  // let filterInfoText = '2019, 2021 & 2022';
   
-  if(filteredYear ==='2019'){
-    filterInfoText ='2020,2021 & 2022';
-  }else if(filteredYear ==='2021'){
-    filterInfoText = '2019,2020 & 2022';
-  }else {
-    filterInfoText = '2019,2020 & 2021';
-  }
+  // if(filteredYear ==='2019'){
+  //   filterInfoText ='2020, 2021 & 2022';
+  // }else if(filteredYear ==='2021'){
+  //   filterInfoText = '2019, 2020 & 2022';
+  // }else{
+  //   filterInfoText = '2019, 2020 & 2021';
+  // }
 
   const filterChangeHandler = (selectedYear) =>{
     setfilteredYear(selectedYear);
