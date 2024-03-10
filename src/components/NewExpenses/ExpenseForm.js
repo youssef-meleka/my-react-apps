@@ -68,8 +68,8 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
-            date: new Date(enteredDate)
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
         };
         // you set value back to empty string which was the initial state in the form so you can 
         // overrirde what the user submitted to clear the inputs in form 
