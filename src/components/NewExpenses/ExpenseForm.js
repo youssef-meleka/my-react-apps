@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     
     // solution 1
     const [enteredTitle, setEneteredTitle] = useState('');
@@ -76,7 +76,10 @@ const ExpenseForm = () => {
         setEneteredTitle('');
         setEneteredAmount('');
         setEneteredDate('');
-        console.log(expenseData);
+
+        //execute function here
+        props.onSaveExpenseData(expenseData);
+
     };
     // 2 way binding: for inputs we don't just listen to changes, but we can also pass a new 
     //value back to the input 
